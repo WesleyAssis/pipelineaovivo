@@ -23,6 +23,8 @@ def salvar_no_postgres(dados: Vendas):
             user=DB_USER,
             password=DB_PASS
         )
+        
+        conn.set_client_encoding('UTF8')
         cursor = conn.cursor()
         
         # Inserção dos dados na tabela de vendas
